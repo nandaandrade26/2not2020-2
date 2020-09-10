@@ -1,7 +1,9 @@
 let comp = 0
+
+//Implementação recursiva, baseada em loop
 function buscaBinaria(lista, valorBusca, fnComp) {// lista = universo de dados /valor = valor a ser buscado/ fnComp = parametro genérico
     let inicio = 0
-    let fim = lista.length - 1 // length = pposiçãoes totais do vetor
+    let fim = lista.length - 1 // length = posiçãoes totais do vetor
     // para chegar na ultima posição lenght - 1
     
     while(fim >= inicio) {
