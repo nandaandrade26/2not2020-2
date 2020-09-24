@@ -34,13 +34,15 @@ function selectionSort(vetor) {
     }
     console.log({passadas, comparacoes, totalTocas})
 }
-const nums = [56, 78, 44, 23, 99, 14, 60, 37, 6, 89, 31, 65]
+/*
+    const nums = [56, 78, 44, 23, 99, 14, 60, 37, 6, 89, 31, 65]
 
-console.time('nums')
-selectionSort(nums)
-console.timeEnd('nums')
+    console.time('nums')
+    selectionSort(nums)
+    console.timeEnd('nums')
 
-console.log(nums) // Retornar 8 (posição do valor 6)
+    console.log(nums) // Retornar 8 (posição do valor 6)
+*/
 
 // for externo da 1ª a penultima
 // for interno da posição do for externo mais 1 a útima
@@ -49,4 +51,10 @@ let nomes = require('./dados/100-mil-nomes')
 console.time('Teste nomes')
 selectionSort(nomes)
 console.timeEnd('Teste nomes')
+// Medindo a memória utilizada pelo programa
+let memoria = process.memoryUsage().heapUsed / 1024 / 1024 // gera memória em kb, dividindo pelo 1024 2* chega em mg
 console.log(nomes)
+console.log('Memória utilizada (MB):', memoria)
+
+//ajuda a saber se o dispositivo tem memória sufiente para executar algoritimo
+// nesse caso usar um algoritimo mais lento pode resolver
